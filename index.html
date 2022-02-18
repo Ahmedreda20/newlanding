@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Quicksand:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        mode: 'jit',
+        theme: {
+          extend: {
+            // screens: {
+            //   tall: { raw: '(max-height: 640px)' },
+            // },
+            container: {
+              center: true,
+              screens: {
+                sm: '100%',
+                xl: '1280px',
+                '2xl': '1366px',
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        font-family: 'Cairo', 'Quicksand', sans-serif;
+      }
+      .active::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+        height: 3px;
+        background-color: #facc15;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .active::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border: 8px solid transparent;
+        border-bottom-color: #facc15;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .styled-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 70%;
+        height: 10px;
+        background-color: #facc1570;
+      }
+
+      .banner-container::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 250px;
+        background: url(/images/wave.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .how-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: #facc1560;
+      }
+      .how-img::before {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+        border: 4px solid #6b7280;
+        border-bottom-left-radius: 70%;
+        width: 50%;
+        height: 50%;
+      }
+      .solutions-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(
+          45deg,
+          #facc1530,
+          #facc1530 30%,
+          #f59e0b80 530,
+          #f59e0b80 532,
+          #fff 32%
+        );
+        background: -webkit-linear-gradient(
+          45deg,
+          #facc1530,
+          #facc1530 30%,
+          #f59e0b80 30%,
+          #f59e0b80 32%,
+          #fff 32%
+        );
+        background: -moz-linear-gradient(
+          45deg,
+          #facc1530,
+          #facc1530 30%,
+          #f59e0b80 30%,
+          #f59e0b80 32%,
+          #fff 32%
+        );
+        background: -ms-linear-gradient(
+          45deg,
+          #facc1530,
+          #facc1530 30%,
+          #f59e0b80 30%,
+          #f59e0b80 32%,
+          #fff 32%
+        );
+        background: -o-linear-gradient(
+          45deg,
+          #facc1530,
+          #facc1530 30%,
+          #f59e0b80 30%,
+          #f59e0b80 32%,
+          #fff 32%
+        );
+      }
+    </style>
+  </head>
+  <body class="space-y-6">
+    <!-- header md - lg -->
+    <header class="w-full bg-white sticky top-0 z-10 border-b border-gray-100">
+      <div class="w-full flex justify-between items-center gap-4 xl:container lg:py-0 py-4 px-4">
+        <div>
+          <img src="/images/logo.png" alt="logo" class="w-full max-w-[110px] h-auto object-cover" />
+        </div>
+        <div class="flex-1 hidden lg:block">
+          <nav class="table mx-auto">
+            <ul class="flex items-center justify-center gap-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semibold px-3 py-5 relative block active"
+                >
+                  الرئيسية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semibold px-3 py-5 relative block"
+                >
+                  الوظائف
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semibold px-3 py-5 relative block"
+                >
+                  الحلول
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semibold px-3 py-5 relative block"
+                >
+                  الاكاديمية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semibold px-3 py-5 relative block"
+                >
+                  الاسئلة الشائعة
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div>
+          <div class="flex gap-2 sm:gap-4 items-center">
+            <div>
+              <div class="flex-1 flex items-center gap-2">
+                <button type="button" class="text-gray-600">En</button>
+                <span class="text-gray-600">|</span>
+                <button type="button" class="text-yellow-500">عربي</button>
+              </div>
+            </div>
+            <div>
+              <button
+                class="py-2 px-4 rounded-md shadow-xl shadow-yellow-400/20 transition-transform hover:-translate-y-0.5 bg-yellow-400 text-gray-800 text-center font-medium rtl:font-semibold text-sm hidden sm:block"
+              >
+                دخول أعمال
+              </button>
+            </div>
+            <div>
+              <button
+                class="w-8 h-8 flex items-center justify-center block lg:hidden text-gray-600"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 8h16M4 16h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full h-screen overflow-y-auto p-4 py-14 flex items-center justify-center bg-white hidden fixed top-0 z-20"
+      >
+        <button
+          class="w-10 h-10 flex items-center justify-center text-gray-600 fixed top-4 left-1/2 -translate-x-1/2 rounded-full border border-gray-100 transition-transform hover:rotate-[360deg]"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <nav>
+          <ul class="flex items-center flex-col gap-1">
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 font-medium rtl:font-semibold p-3 px-4 relative block active"
+              >
+                الرئيسية
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 font-medium rtl:font-semibold p-3 px-4 relative block"
+              >
+                الوظائف
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 font-medium rtl:font-semibold p-3 px-4 relative block"
+              >
+                الحلول
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 font-medium rtl:font-semibold p-3 px-4 relative block"
+              >
+                الاكاديمية
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-600 font-medium rtl:font-semibold p-3 px-4 relative block"
+              >
+                الاسئلة الشائعة
+              </a>
+            </li>
+            <li>
+              <button
+                class="py-2 text-sm px-6 rounded-full bg-yellow-500 text-gray-800 text-center font-medium rtl:font-semibold shadow-xl shadow-yellow-500/20 transition-transform hover:-translate-y-0.5 block sm:hidden"
+              >
+                دخول اعمال
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- ./header md - lg -->
+    <!-- banner -->
+    <section class="w-full bg-gray-100 p-6 relative banner-container !mt-0">
+      <main class="w-full xl:container flex lg:flex-row flex-col items-center gap-8 z-[2] relative">
+        <div class="flex-1">
+          <div class="space-y-8">
+            <h1
+              class="text-4xl font-semibold rtl:font-bold text-gray-800 lg:text-left lg:rtl:text-right text-center"
+            >
+              جميع خدمات الاعمال في موقع واحد
+            </h1>
+            <h1
+              class="text-2xl font-medium rtl:font-semibold text-gray-600 lg:text-left lg:rtl:text-right text-center"
+            >
+              تساعدك التطبيقات العالمية في عرض خدماتك والوصول إلى أكبر شريحة عملاء
+            </h1>
+            <button
+              class="py-2 px-6 rounded-lg bg-yellow-400 text-gray-800 text-center text-base font-medium rtl:font-semiblod shadow-xl shadow-yellow-400/20 hover:shadow-yellow-400/40 transition-transform duration-200 table lg:ltr:mr-auto lg:rtl:ml-auto mx-auto lg:rtl:mr-0 lg:ltr:ml-0"
+            >
+              انضم الان
+            </button>
+          </div>
+        </div>
+        <div class="flex-1 max-w-sm">
+          <div>
+            <img
+              src="/images/Business challenge-amico.svg"
+              alt="banner image"
+              class="w-full max-w-sm object-cover"
+            />
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- ./banner -->
+    <!-- solutions -->
+    <section class="w-full solutions-container py-10 relative">
+      <div class="relative">
+        <h1
+          class="text-3xl font-semibold rtl:font-bold text-center table mx-auto text-gray-800 px-4 relative styled-title"
+        >
+          حلول بلا حدود
+        </h1>
+        <h2 class="text-lg text-gray-600 font-medium rtl:font-semibold mt-3 text-center">
+          انطلق بعملك عبر الإنترنت مع حلول آمنة وقابلة للتطوير مع التطبيقات العالمية
+        </h2>
+        <div
+          class="mt-10 flex flex-col lg:flex-row items-center justify-between gap-10 xl:container"
+        >
+          <div class="flex-1">
+            <div class="w-full space-y-2 max-w-md">
+              <figure class="table w-auto p-6 w-full rounded-xl bg-yellow-400/20">
+                <header class="w-full flex items-center justify-center gap-4">
+                  <div>
+                    <div
+                      class="flex items-center justify-center text-gray-600 font-bold w-8 h-8 text-lg bg-white rounded-full"
+                    >
+                      1
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <h1 class="text-gray-800 font-medium rtl:font-semiblod">متجري</h1>
+                  </div>
+                  <div>
+                    <a href="#" class="underline text-gray-600 font-medium rtl:font-semiblod">
+                      المزيد
+                    </a>
+                  </div>
+                </header>
+                <blockquote class="w-full space-y-4 mt-4">
+                  <h1 class="text-gray-800 truncate font-semibold rtl:font-bold text-lg">
+                    متجر الكتروني شامل
+                  </h1>
+                  <p class="text-gray-600 font-medium rtl:font-semibold">
+                    احصل على متجرط الالكتروني مع لوحة تحكم شاملة وابدأ البيع في اقل من 7 ايام عمل
+                    بقيمة تبدأ من 1999 ريال فقط
+                  </p>
+                  <a
+                    href="#"
+                    class="py-2 px-6 rounded-full bg-yellow-400 text-gray-800 text-center table mx-auto font-medium rtl:font-semiblod transition-transform hover:translate-y-0.5"
+                  >
+                    احصل على تطبيق الجوال بقيمة اضافية
+                  </a>
+                </blockquote>
+              </figure>
+              <div class="table p-4 w-full text-center">
+                <i class="fa-solid fa-angle-down text-gray-600 text-lg animate-bounce"></i>
+              </div>
+              <div class="table mx-auto">
+                <div
+                  class="flex items-center p-1.5 bg-yellow-400/50 border-2 border-gray-300 rounded-xl"
+                >
+                  <div>
+                    <div class="w-10 h-10 rounded-xl bg-white p-2">
+                      <img
+                        src="/images/infinity.png"
+                        alt="solution image"
+                        class="w-full h-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="flex-1">
+                    <p class="text-gray-600 font-medium rtl:font-semibold text-lg px-4">
+                      غير محدود
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="table mx-auto p-4 !mt-6">
+                <div class="flex items-center flex-wrap gap-4">
+                  <figure class="p-4 border-2 border-gray-400 rounded-md rounded-bl-3xl">
+                    <div
+                      class="flex items-center justify-center text-gray-600 -mt-8 font-bold w-8 h-8 text-lg bg-white rounded-md border-2 border-gray-400 mx-auto mb-2"
+                    >
+                      1
+                    </div>
+                    <p class="text-gray-600 font-medium rtl:font-semibold px-4">طلبات</p>
+                  </figure>
+                  <figure class="p-4 border-2 border-gray-400 rounded-md rounded-bl-3xl">
+                    <div
+                      class="flex items-center justify-center text-gray-600 -mt-8 font-bold w-8 h-8 text-lg bg-white rounded-md border-2 border-gray-400 mx-auto mb-2"
+                    >
+                      2
+                    </div>
+                    <p class="text-gray-600 font-medium rtl:font-semibold px-4">عملاء</p>
+                  </figure>
+                  <figure class="p-4 border-2 border-gray-400 rounded-md rounded-bl-3xl">
+                    <div
+                      class="flex items-center justify-center text-gray-600 -mt-8 font-bold w-8 h-8 text-lg bg-white rounded-md border-2 border-gray-400 mx-auto mb-2"
+                    >
+                      3
+                    </div>
+                    <p class="text-gray-600 font-medium rtl:font-semibold px-4">منتجات</p>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="w-full space-y-10">
+              <img
+                src="/images/website-IA6G-delivery.png"
+                alt="solution image"
+                class="w-full max-w-lg h-auto object-cover mx-auto table"
+              />
+              <div class="table mx-auto space-y-2">
+                <div class="table">
+                  <div
+                    class="flex items-center p-1.5 border-2 border-gray-600 rounded-full rounded-tl-lg"
+                  >
+                    <div>
+                      <div class="w-10 h-10">
+                        <img
+                          src="/images/free.png"
+                          alt="solution image"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-gray-600 font-medium rtl:font-semibold text-lg px-4">
+                        دومين خاص مجاني
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table">
+                  <div
+                    class="flex items-center p-1.5 border-2 border-gray-600 rounded-full rounded-tl-lg"
+                  >
+                    <div>
+                      <div class="w-10 h-10">
+                        <img
+                          src="/images/free.png"
+                          alt="solution image"
+                          class="w-full h-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-gray-600 font-medium rtl:font-semibold text-lg px-4">
+                        بريد الالكتروني غير محدود مجانا
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10 mx-auto table">
+          <div class="flex items-center justify-center gap-4">
+            <button
+              class="w-12 h-12 rounded-full bg-transparent flex items-center justify-center text-lg border border-gray-500"
+            >
+              <i class="fa-solid fa-angle-right"></i>
+            </button>
+            <button
+              class="w-12 h-12 rounded-full bg-transparent flex items-center justify-center text-lg border border-gray-500"
+            >
+              <i class="fa-solid fa-angle-left"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./solutions -->
+    <!-- how -->
+    <section class="w-full p-6 how-container relative py-10 lg:after:h-3/5 after:h-full">
+      <div class="relative z-[1]">
+        <h1
+          class="text-3xl font-semibold rtl:font-bold text-center table mx-auto text-gray-800 px-4 relative styled-title"
+        >
+          كيف ابدأ؟
+        </h1>
+        <div
+          class="mt-10 w-full xl:container p-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <div class="w-full">
+            <figure class="w-full space-y-6">
+              <figcaption class="w-full h-auto p-6 rounded-xl bg-white/50 space-y-2">
+                <div
+                  class="flex items-center justify-center bg-white w-10 h-10 text-lg text-gray-800 rounded-full font-bold mb-2 -mt-10"
+                >
+                  1
+                </div>
+                <h1 class="text-lg font-semibold rtl:font-bold text-gray-800">التسجيل</h1>
+                <p class="font-medium rtl:font-semibold text-gray-600">اضف بياناتك</p>
+              </figcaption>
+              <blockquote class="w-full h-auto relative how-img">
+                <img
+                  src="/images/istockphoto-1016975812-612x612.jpg"
+                  alt="how image"
+                  class="w-full h-auto rounded-xl rounded-bl-[30%] border-4 border-gray-300 relative"
+                />
+              </blockquote>
+            </figure>
+          </div>
+          <div class="w-full">
+            <figure class="w-full space-y-6 lg:mt-10">
+              <figcaption class="w-full h-auto p-6 rounded-xl bg-white/50 space-y-2">
+                <div
+                  class="flex items-center justify-center bg-white w-10 h-10 text-lg text-gray-800 rounded-full font-bold mb-2 -mt-10"
+                >
+                  2
+                </div>
+                <h1 class="text-lg font-semibold rtl:font-bold text-gray-800">الخدمات</h1>
+                <p class="font-medium rtl:font-semibold text-gray-600">اختار الخدمات التي تقدمها</p>
+              </figcaption>
+              <blockquote class="w-full h-auto relative how-img">
+                <img
+                  src="/images/1602623277-GettyImages-1204099658.jpg"
+                  alt="how image"
+                  class="w-full h-auto rounded-xl rounded-bl-[30%] border-4 border-gray-300 relative"
+                />
+              </blockquote>
+            </figure>
+          </div>
+          <div class="w-full">
+            <figure class="w-full space-y-6 lg:mt-20">
+              <figcaption class="w-full h-auto p-6 rounded-xl bg-white/50 space-y-2">
+                <div
+                  class="flex items-center justify-center bg-white w-10 h-10 text-lg text-gray-800 rounded-full font-bold mb-2 -mt-10"
+                >
+                  3
+                </div>
+                <h1 class="text-lg font-semibold rtl:font-bold text-gray-800">ابدء العمل</h1>
+                <p class="font-medium rtl:font-semibold text-gray-600">
+                  استقبل طلبات العملاء وقدم خدمات
+                </p>
+              </figcaption>
+              <blockquote class="w-full h-auto relative how-img">
+                <img
+                  src="/images/business-start.jpg"
+                  alt="how image"
+                  class="w-full h-auto rounded-xl rounded-bl-[30%] border-4 border-gray-300 relative"
+                />
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./how -->
+    <!-- services -->
+    <section class="w-full p-6">
+      <div class="w-full p-8 !pb-10 rounded-3xl bg-gray-100 xl:container">
+        <h1
+          class="text-3xl font-semibold rtl:font-bold text-center table mx-auto text-gray-800 px-4 relative styled-title"
+        >
+          الخدمات
+        </h1>
+        <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                تطوير المواقع الالكترونية
+              </h1>
+            </blockquote>
+          </figure>
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                خدمات واجهات المستخدم
+              </h1>
+            </blockquote>
+          </figure>
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                الذكاء الاصطناعي
+              </h1>
+            </blockquote>
+          </figure>
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                تطوير تطبيقات الجوال
+              </h1>
+            </blockquote>
+          </figure>
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                الدعم الفني
+              </h1>
+            </blockquote>
+          </figure>
+          <figure class="w-full bg-white py-10 px-4 space-y-4">
+            <figcaption>
+              <img
+                src="/images/coding (1).png"
+                alt="services icon"
+                class="w-16 h-16 object-fit mx-auto table"
+              />
+            </figcaption>
+            <blockquote>
+              <h1 class="text-lg font-medium rtl:font-semibold text-gray-800 text-center">
+                أنطمة تخطيط موارد المؤسسات
+              </h1>
+            </blockquote>
+          </figure>
+        </div>
+      </div>
+    </section>
+    <!-- ./services -->
+    <!-- faqs -->
+    <section class="w-full p-6">
+      <h1
+        class="text-3xl font-semibold rtl:font-bold text-center table mx-auto text-gray-800 px-4 relative styled-title"
+      >
+        الاسئلة الشائعة
+      </h1>
+      <div
+        class="mt-10 xl:container flex md:items-end items-center md:flex-row flex-col justify-center gap-8"
+      >
+        <div class="flex-1">
+          <div class="w-full space-y-4 pl-6 rtl:pr-6 rtl:pl-0">
+            <figure class="w-full rounded-xl border border-gray-300 bg-yellow-400/25">
+              <header class="p-3 flex items-center relative gap-4">
+                <div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-sky-600 border-4 border-white flex items-center justify-center text-lg rtl:-mr-8 text-white"
+                  >
+                    1
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h1 class="text-lg text-gray-800 font-medium rtl:font-semibold">
+                    هل النظام الأساسي عبارة عن متجر واحد أم متعدد المتاجر؟
+                  </h1>
+                </div>
+                <div>
+                  <button class="w-8 h-8 flex items-center justify-center text-gray-600 text-base">
+                    <i class="fa-solid fa-minus"></i>
+                  </button>
+                </div>
+              </header>
+              <blockquote class="w-full px-10 pb-6">
+                <p class="text-gray-600 text-base font-medium rtl:font-semibold">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque distinctio earum
+                  delectus cupiditate aperiam amet animi, natus ipsum ullam quas veniam facere
+                  commodi modi placeat non! Culpa ipsum sint iste?]
+                </p>
+              </blockquote>
+            </figure>
+            <figure class="w-full rounded-xl border border-gray-300 bg-yellow-400/25">
+              <header class="p-3 flex items-center relative gap-4">
+                <div>
+                  <div
+                    class="w-10 h-10 rounded-full bg-sky-600 border-4 border-white flex items-center justify-center text-lg rtl:-mr-8 text-white"
+                  >
+                    2
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <h1 class="text-lg text-gray-800 font-medium rtl:font-semibold">
+                    هل النظام الأساسي عبارة عن متجر واحد أم متعدد المتاجر؟
+                  </h1>
+                </div>
+                <div>
+                  <button class="w-8 h-8 flex items-center justify-center text-gray-600 text-base">
+                    <i class="fa-solid fa-plus"></i>
+                  </button>
+                </div>
+              </header>
+              <blockquote class="w-full px-10 pb-6 hidden">
+                <p class="text-gray-600 text-base font-medium rtl:font-semibold">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque distinctio earum
+                  delectus cupiditate aperiam amet animi, natus ipsum ullam quas veniam facere
+                  commodi modi placeat non! Culpa ipsum sint iste?]
+                </p>
+              </blockquote>
+            </figure>
+          </div>
+        </div>
+        <div class="flex-1 max-w-md">
+          <div>
+            <img
+              src="/images/faq.png"
+              alt="faq image"
+              class="w-full h-auto max-w-md object-cover"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ./faqs -->
+    <!-- partners -->
+    <section class="w-full p-6">
+      <h1
+        class="text-3xl font-semibold rtl:font-bold text-center table mx-auto text-gray-800 px-4 relative styled-title"
+      >
+        شركاءنا
+      </h1>
+      <div class="mt-8 xl:container relative w-full flex gap-6 snap-x overflow-x-auto pb-14">
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+        <figure class="snap-center shrink-0">
+          <figcaption>
+            <img
+              src="/images/banner.jpg"
+              alt="partner image"
+              class="w-40 h-40 rounded-full object-cover border-2 border-gray-500"
+            />
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- ./partners -->
+    <!-- footer -->
+    <footer class="w-full bg-gray-200">
+      <div
+        class="w-full px-6 py-10 pb-14 flex items-start justify-between gap-10 flex-wrap xl:container"
+      >
+        <figure class="flex-1 space-y-6">
+          <figcaption class="w-full space-y-4">
+            <img
+              src="/images/logo.png"
+              alt="services icon"
+              class="w-full max-w-[110px] object-cover"
+            />
+            <p class="text-gray-600 font-medium rtl:font-semibold">
+              انطلق بعملك عبر الإنترنت مع حلول آمنة وقابلة للتطوير مع التطبيقات العالمية
+            </p>
+          </figcaption>
+          <blockquote class="w-full">
+            <ul class="list-none space-y-4">
+              <li>
+                <a href="#" class="flex items-center gap-4">
+                  <div>
+                    <span
+                      class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center"
+                    >
+                      <i class="fa-solid fa-phone"></i>
+                    </span>
+                  </div>
+                  <span class="font-medium rtl:font-semibold"> +966547130120 </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="flex items-center gap-4">
+                  <div>
+                    <span
+                      class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center"
+                    >
+                      <i class="fa-solid far fa-envelope-open"></i>
+                    </span>
+                  </div>
+                  <span class="font-medium rtl:font-semibold"> info@ia6g.com </span>
+                </a>
+              </li>
+            </ul>
+          </blockquote>
+        </figure>
+        <figure class="flex-1 space-y-6">
+          <figcaption class="w-full">
+            <h1 class="text-lg font-semiblod rtl:font-bold text-gray-800">روابط سريعة</h1>
+          </figcaption>
+          <blockquote>
+            <ul class="list-none space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semiblod hover:text-yellow-400 hover:underline"
+                >
+                  الشروط والاحكام
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semiblod hover:text-yellow-400 hover:underline"
+                >
+                  سياسة الخصوصية
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semiblod hover:text-yellow-400 hover:underline"
+                >
+                  الاسئلة الشائعة
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 font-medium rtl:font-semiblod hover:text-yellow-400 hover:underline"
+                >
+                  تواصل معنا
+                </a>
+              </li>
+            </ul>
+          </blockquote>
+        </figure>
+        <figure class="flex-1 space-y-6">
+          <figcaption class="w-full">
+            <h1 class="text-lg font-semiblod rtl:font-bold text-gray-800">النشرة الاخبارية</h1>
+          </figcaption>
+          <blockquote>
+            <div
+              class="w-full max-w-sm border-2 border-gray-300 flex items-center bg-white p-1.5 rounded-xl"
+            >
+              <div class="flex-1">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="البريد الالكتروني"
+                  class="w-full py-3 px-4 placeholder:text-gray-500 font-medium rtl:font-semiblod"
+                />
+              </div>
+              <div>
+                <button
+                  class="py-3 px-4 bg-yellow-400 text-center text-sm rounded-lg font-medium rtl:font-semiblod"
+                >
+                  اشترك
+                </button>
+              </div>
+            </div>
+            <p class="text-gray-600 font-medium rtl:font-semibold mt-4">
+              اشترك في النشرة الإخبارية ليصلك كل جديد ويعلمك بآخر المشاريع الجديدة
+            </p>
+            <div class="mt-6">
+              <h1 class="text-lg font-semiblod rtl:font-bold text-gray-800">تابعنا</h1>
+              <ul class="list-none flex items-center justify-start gap-3 mt-4">
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center text-lg hover:-translate-y-0.5 hover:rotate-[360deg] transition"
+                  >
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center text-lg hover:-translate-y-0.5 hover:rotate-[360deg] transition"
+                  >
+                    <i class="fa-brands fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center text-lg hover:-translate-y-0.5 hover:rotate-[360deg] transition"
+                  >
+                    <i class="fa-brands fa-linkedin-in"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="w-10 h-10 rounded-full bg-yellow-400/40 text-gray-800 flex items-center justify-center text-lg hover:-translate-y-0.5 hover:rotate-[360deg] transition"
+                  >
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </blockquote>
+        </figure>
+      </div>
+      <div class="p-6 bg-white">
+        <p class="text-sm text-center text-gray-600 font-medium rtl:font-semibold">
+          جميع الحقوق محفوظة © 2022 لدى التطبيقات العالمية
+        </p>
+      </div>
+    </footer>
+    <!-- ./footer -->
+    <!-- wave -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="hidden">
+      <clipPath id="wave">
+        <path
+          fill="#0099ff"
+          fill-opacity="1"
+          d="M0,192L40,192C80,192,160,192,240,170.7C320,149,400,107,480,106.7C560,107,640,149,720,170.7C800,192,880,192,960,170.7C1040,149,1120,107,1200,85.3C1280,64,1360,64,1400,64L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
+        ></path>
+      </clipPath>
+    </svg>
+    <button
+      class="w-14 h-14 rounded-xl bg-yellow-400 text-gray-800 text-lg flex items-center justify-center fixed bottom-5 left-5 rtl:left-auto rtl:right-5 animate-bounce z-10"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </button>
+  </body>
+</html>
